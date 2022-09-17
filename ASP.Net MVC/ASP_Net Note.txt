@@ -1,0 +1,160 @@
+ASP.NET MVC Tutorial
+
+# MVC- (Model-View-Controller) 
+
+1. Model
+2. View
+3. Controller
+
+ASP.NET Core MVC is Microsoft’s Web Application development framework that is in great demand today. It is based on Model-View-Controller (MVC)
+
+""""""""""""""
+ASP.NET Core
+...............
+#  ASP.NET Core was released in the year 2016 and is based on .NET Core framework (now known as just .NET).
+   Latest version right now is .NET 6.0 which was released on November 2021.
+
+# ASP.NET Core is based on .NET Core framework (now known as just .NET). First released during 2015.
+
+#  ASP.NET Core apps are Cross-platform i.e. run on Windows, Linux and macOS.
+
+#  ASP.NET Core apps can be hosted with a number of web servers like IIS, Kestrel, Nginx and Apache.
+
+#  ASP.NET Core has a number of features like Dependency Injection and Middlewares. Apps have less number of   files.
+
+# App are scalable, light-weight and run very fast.
+
+# Apps can be build using MVC architecture and Razor Pages.	
+
+# In-built dependency injection feature.
+
+
+"""""""""""""""
+ASP.NET
+...............
+
+# ASP.NET Web Forms known as just “ASP.NET” is a web application framework released way back on 2002. It is                based on .NET Framework. 
+
+# ASP.NET apps runs only on Windows.
+
+# ASP.NET Web Forms apps can only be hosted with IIS.
+
+#	App are heavy and runs slowly compared to ASP.NET Core apps. Scaling is a big problem for apps build on  ASP.NET Web Forms.
+
+# No in-built dependency injection feature.
+
+
+""""""""""""
+ASP.NET MVC
+............
+
+# ASP.NET MVC is based on .NET Framework. It’s first version came in 2007 while the last version which is ASP.NET MVC 5.0 came in 2016. MVC 6 was abandoned due to .NET Core.
+
+# ASP.NET MVC apps runs only on Windows and uses IIS for hosting.
+
+# ASP.NET MVC is not as advanced compared to ASP.NET Core. Apps have more number of files in them.
+
+# App can be build using only MVC architecture.
+
+# Apps are relatively heavy compared to ASP.NET Core apps.
+
+
+### Features of ASP.NET Core MVC
+...........................
+ This framework is bundled with some of the most amazing feature. These are:
+
+>It is Open Source
+You are free to download this framework’s source code from https://github.com/aspnet and even modify and compile your own version of it.
+
+>Cross-Platform
+ASP.NET Core MVC is cross-platform both for development & deployment. It is available for all operating systems – Windows, Linux & macOS.
+
+>Full Control over HTML & HTTP
+In ASP.NET Core MVC you get full control over HTML. You can create, simple to complex type, HTML styled with CSS and display them on the browser.
+
+Similarly you get full control over HTTP requests passed between the browser and server. Creating AJAX request is also very easy.
+
+You can easily use client side libraries like jQuery, Angular, React & Bootstrap with ASP.NET Core MVC.
+
+>Extensible Framework
+ASP.NET Core MVC is highly extensible. You can make applications that can be extended to any levels in future. Key features of this framework that gives it the extensible power are:
+
+1. View Components
+2. Tag Helpers
+3. Routing
+
+>Testing made Maintainability
+The ASP.NET Core MVC architecture is great for making your application maintainable and testable. You can separate, different areas of your application, into independent pieces and test them independently. Testing frameworks like xUnit & MOQ can be easily integrated for simulating any scenario.
+
+ASP.NET Core MVC makes large to very large applications easy for maintaining.
+
+
+>Routing
+ASP.NET Core MVC “Routing” makes SEO friendly URL which are easy to make and can be controlled from a single place. This removes the probability of error.
+
+You don’t have to hard core the URL, instead the Routing will make it for you based on the structure which you have set.
+
+
+                                 What is MVC Architecture
+                               ............................
+
+# Model View Controller (MVC) is a software architecture for developing applications. It has 3 pieces:
+
+1. Model – It contains the data for the application to work with. This data is provided to the Model from the   database or any other repository.
+MVC Models
+Taking an example of a social community website like Facebook, a Model will contains all your details like – your name, ages, status, work info, your posts by date, your comments done on other profiles, your messages to other people, your liked pages and so on.
+
+These details (your data) are filled on the Model by the Controller.
+
+Models also help in preserving the business logic of the application (here for Facebook). For example when running paid ads in Facebook, Models will not allowed you to add invalid amounts on the ads. Example – ‘some amount’, ‘thirty’, ‘hello’ etc. It will also only proper amounts like ‘$10’, ’£20.50’, ‘$100’, etc
+
+2. View – It forms the User Interface (UI) and is rendered on the browser. Views contains HTML layouts which the user actually sees on the browser.
+
+Views are the User Interface (UI) in MVC and are rendered on the browser. They can contain static HTML or dynamic HTML sent by the Controller. Views communicate only with the Controllers and not with Models.
+
+Controller is responsible for rendering a particular View based on the request it gets from the browser.
+
+
+3. Controller – Controller is the brain of the MVC application. It processes the incoming request to the  application, performs operations like data filling, data update, data delete, data inserts, etc, and finally renders an appropriate View to the browser based on the request.
+
+Controller is the main thing in MVC. It sits between the View and the Model and communicates with them. All HTTP requests are received by the Controller, which after processing it, fills the data on the Model and sends the data on the View. The View is then rendered on the browser.
+
+
+# wwwroot – contains the static files like images, scripts, external frameworks and libraries like Bootstrap,   jQuery.
+
+# Controllers – This folder contains the controller files.
+
+# Models – This folder contains the model files.
+
+# Views – This folder contains the view files.
+
+# appsettings.json – This file contains configuration settings of the application. You can use it to store database connection string, application variable values and other informations.
+
+#  program.cs – It is your application’s entry point which starts when you run your application. Here you create your application host, choose the web server, add services, authorization and authentications.
+
+# startup.cs – Note – DOT NET 6.0 does not have startup.cs. If you are using earlier versions of .NET only then you need to have this file in your app. The startup.cs is called from the program.cs file. Here you add services and configure the HTTP pipeline. You also write URL Routes in this file.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
