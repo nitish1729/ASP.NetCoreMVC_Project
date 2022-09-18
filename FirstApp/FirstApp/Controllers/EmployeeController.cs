@@ -9,10 +9,10 @@ namespace FirstApp.Controllers
 {
     public class EmployeeController : Controller
     {
-        public IActionResult Index()
-        {
-            return View();
-        }
+        //public IActionResult Index()
+        //{
+        //    return View();
+        //}
         // HTTP GET VERSION
         public IActionResult Create()
         {
@@ -26,5 +26,10 @@ namespace FirstApp.Controllers
             Repository.Create(employee);
             return View("Thanks", employee);
         }
+        public IActionResult Index()
+        {
+            return View(Repository.AllEmpoyees);
+        }
+
     }
 }
