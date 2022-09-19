@@ -1,4 +1,25 @@
-﻿<style>
+﻿<div>
+    <form method="get" asp-controller = "Home" asp-action ="Index">
+    <table border="1px">
+        <tr>
+            <td>
+                Name :
+                </td>
+            <td>
+                <input type="text" name="Name" />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <button type="submit">Submit</button>
+            </td>
+        </tr>
+    </table>
+    </form>
+</div>
+
+
+@*<style>
     *{
         margin:0;
         padding:0;
@@ -38,4 +59,4 @@
 </div>
 <div>
     <button class="btn btn-warning"> Register Now</button>
-</div>
+</div>*@
