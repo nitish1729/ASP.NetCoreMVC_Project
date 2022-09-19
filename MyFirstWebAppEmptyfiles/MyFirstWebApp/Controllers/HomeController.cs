@@ -6,10 +6,11 @@ namespace MyFirstWebApp.Controllers
     {
         public IActionResult Index()
         {
-
+            // data transformimg from controller to views
             //Console.WriteLine("Nitish Mehta");
             //ViewData["Name"] = "Nitish Mehta";
             ViewBag.Name = "You will face many defeats in life, but never let yourself be defeated. - ...";
+            TempData["Name"] = "Nitish Mehta, What should I learn before learning ASP.NET Core";
             return View();
         }
         public IActionResult navbar()
@@ -21,6 +22,11 @@ namespace MyFirstWebApp.Controllers
             Console.WriteLine("Nitish Mehta");
             return View();
            
+        }
+        public IActionResult Welcome()
+        {
+            string Name = TempData["Name"].ToString();
+            return View();
         }
     }
 }

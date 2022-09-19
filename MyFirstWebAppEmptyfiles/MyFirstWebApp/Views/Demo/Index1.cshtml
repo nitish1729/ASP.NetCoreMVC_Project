@@ -1,7 +1,16 @@
-﻿<h1>@ViewBag.show HTTP Logging middleware </h1>
-<p>
-    Support for the HTTP Logging middleware has been introduced in ASP.NET Core 6.<br /> You can take advantage of this middleware in ASP.NET Core 6 to log information about HTTP requests and responses that include one or more of the following:
-<p style="color:green"><i><b>@ViewBag.show</b></i></p>
-</p>
-@*//data transformimg from controller to views*@
+﻿<div>
+<h4>Various Ways to Pass Data From Controller to View in MVC</h4>
+    <h5>There are various ways to pass data from a Controller to a View. I'm going to discuss how Controllers interact with Views and specifically cover ways you can pass data from a Controller to a View to render a response back to a client. So, let's get started.</h5>
+    <ol>
+        <h2>
+        <li><u>ViewBag</u></li></h2>
+        <p>ViewBag is a very well known way to pass the data from Controller to View & even View to View. </p>
+        <h2>
+        <li><u>ViewModel</u></li></h2>
+        <p>Using ViewModel we can also pass the data from the Controller to View</p>
+    </ol>
+
+<li><u>TempData</u></li></h2>
+<p>TempData is meant to be a very short-lived instance, and you should only use it during the current and the subsequent requests only. Since TempData works this way, you need to know for sure what the next request will be, and redirecting to another view is the only time you can guarantee this. You can use TempData to pass error messages or something similar.</p>
+</div>
 @ViewBag.show
