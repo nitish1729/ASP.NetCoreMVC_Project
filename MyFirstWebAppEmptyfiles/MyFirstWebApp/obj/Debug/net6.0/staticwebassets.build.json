@@ -1,0 +1,19 @@
+{
+  "Version": 1,
+  "Hash": "6YivPwfgzybdKv0L2RAYuViWO0ZCB8tSIG6XMCjhqQI=",
+  "Source": "MyFirstWebApp",
+  "BasePath": "_content/MyFirstWebApp",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "MyFirstWebApp\\wwwroot",
+      "Source": "MyFirstWebApp",
+      "ContentRoot": "C:\\Users\\NITISH MEHTA\\OneDrive\\Desktop\\.Net_Developer\\MyFirstWebAppEmptyfiles\\MyFirstWebApp\\wwwroot\\",
+      "BasePath": "_content/MyFirstWebApp",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": []
+}
