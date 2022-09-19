@@ -22,3 +22,4 @@ C:\Users\NITISH MEHTA\OneDrive\Desktop\.Net_Developer\MyFirstWebAppEmptyfiles\My
 C:\Users\NITISH MEHTA\OneDrive\Desktop\.Net_Developer\MyFirstWebAppEmptyfiles\MyFirstWebApp\obj\Debug\net6.0\ref\MyFirstWebApp.dll
 C:\Users\NITISH MEHTA\OneDrive\Desktop\.Net_Developer\MyFirstWebAppEmptyfiles\MyFirstWebApp\obj\Debug\net6.0\MyFirstWebApp.RazorAssemblyInfo.cache
 C:\Users\NITISH MEHTA\OneDrive\Desktop\.Net_Developer\MyFirstWebAppEmptyfiles\MyFirstWebApp\obj\Debug\net6.0\MyFirstWebApp.RazorAssemblyInfo.cs
+C:\Users\NITISH MEHTA\OneDrive\Desktop\.Net_Developer\MyFirstWebAppEmptyfiles\MyFirstWebApp\bin\Debug\net6.0\libman.json

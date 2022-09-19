@@ -6,7 +6,10 @@ namespace MyFirstWebApp.Controllers
     {
         public IActionResult Index()
         {
-            Console.WriteLine("Nitish Mehta");
+
+            //Console.WriteLine("Nitish Mehta");
+            //ViewData["Name"] = "Nitish Mehta";
+            ViewBag.Name = "You will face many defeats in life, but never let yourself be defeated. - ...";
             return View();
         }
         public IActionResult navbar()

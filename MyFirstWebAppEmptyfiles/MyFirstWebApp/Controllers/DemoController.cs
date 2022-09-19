@@ -6,6 +6,7 @@ namespace MyFirstWebApp.Controllers
     {
         public IActionResult Index1()
         {
+            ViewBag.show = "Nitish Mehta";
             return View();
         }
     }
