@@ -1,0 +1,15 @@
+C:\Users\NITISH MEHTA\OneDrive\Desktop\.Net_Developer\C_Csharp\C_Csharp\bin\Debug\net6.0\C_Csharp.exe
+C:\Users\NITISH MEHTA\OneDrive\Desktop\.Net_Developer\C_Csharp\C_Csharp\bin\Debug\net6.0\C_Csharp.deps.json
+C:\Users\NITISH MEHTA\OneDrive\Desktop\.Net_Developer\C_Csharp\C_Csharp\bin\Debug\net6.0\C_Csharp.runtimeconfig.json
+C:\Users\NITISH MEHTA\OneDrive\Desktop\.Net_Developer\C_Csharp\C_Csharp\bin\Debug\net6.0\C_Csharp.dll
+C:\Users\NITISH MEHTA\OneDrive\Desktop\.Net_Developer\C_Csharp\C_Csharp\bin\Debug\net6.0\C_Csharp.pdb
+C:\Users\NITISH MEHTA\OneDrive\Desktop\.Net_Developer\C_Csharp\C_Csharp\obj\Debug\net6.0\C_Csharp.csproj.AssemblyReference.cache
+C:\Users\NITISH MEHTA\OneDrive\Desktop\.Net_Developer\C_Csharp\C_Csharp\obj\Debug\net6.0\C_Csharp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\NITISH MEHTA\OneDrive\Desktop\.Net_Developer\C_Csharp\C_Csharp\obj\Debug\net6.0\C_Csharp.AssemblyInfoInputs.cache
+C:\Users\NITISH MEHTA\OneDrive\Desktop\.Net_Developer\C_Csharp\C_Csharp\obj\Debug\net6.0\C_Csharp.AssemblyInfo.cs
+C:\Users\NITISH MEHTA\OneDrive\Desktop\.Net_Developer\C_Csharp\C_Csharp\obj\Debug\net6.0\C_Csharp.csproj.CoreCompileInputs.cache
+C:\Users\NITISH MEHTA\OneDrive\Desktop\.Net_Developer\C_Csharp\C_Csharp\obj\Debug\net6.0\C_Csharp.dll
+C:\Users\NITISH MEHTA\OneDrive\Desktop\.Net_Developer\C_Csharp\C_Csharp\obj\Debug\net6.0\refint\C_Csharp.dll
+C:\Users\NITISH MEHTA\OneDrive\Desktop\.Net_Developer\C_Csharp\C_Csharp\obj\Debug\net6.0\C_Csharp.pdb
+C:\Users\NITISH MEHTA\OneDrive\Desktop\.Net_Developer\C_Csharp\C_Csharp\obj\Debug\net6.0\C_Csharp.genruntimeconfig.cache
+C:\Users\NITISH MEHTA\OneDrive\Desktop\.Net_Developer\C_Csharp\C_Csharp\obj\Debug\net6.0\ref\C_Csharp.dll
