@@ -9,7 +9,7 @@ using static C_Csharp.Enumeration;
 //hlo.hello();
 
 
- //   DataTypes type = new DataTypes();
+//   DataTypes type = new DataTypes();
 
 // DataTypes.datatype();
 
@@ -94,6 +94,7 @@ access.ZipCode = int.Parse(Console.ReadLine());
 access.AccessSpecifier();
 goto label;
 */
+/*
 // ENCAPSULATION USING PROPERTIES
 PrivateAccessSpecifiers Private = new PrivateAccessSpecifiers();
 Private.getname = "Nitish Mehta";
@@ -101,3 +102,17 @@ Private.getcity = "Bangalore";
 Private.getZipCode = 560068;
 Private.AccessSpecifier();
 Private.getpartname = ".NetDeveloper";
+
+*/
+Bank b = new Bank();
+b.AccountNumber = 12345678;
+b.Balance = 546868;
+b.Name = "Mehta";
+b.GetBalance();
+b.WithdrawAmount();
+//b.getbalance = 15444;
+Console.WriteLine(b.getbalance);
+b.SetBalance(56546862);
+b.SetBalance(500);
+Console.WriteLine(b.GetBalance());
+
