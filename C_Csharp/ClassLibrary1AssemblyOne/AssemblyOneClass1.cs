@@ -22,7 +22,7 @@ namespace AssemblyOne
         {
             //You cannot access the Private Member from the Derived Class
             //Within the Same Assembly
-           Console.WriteLine(Id); //Compile Time Error
+          // Console.WriteLine(Id); //Compile Time Error
         }
     }
     public class AssemblyOneClass3
@@ -32,7 +32,7 @@ namespace AssemblyOne
             //You cannot access the Private Member from the Non-Derived Classes
             //Within the Same Assembly
             AssemblyOneClass1 obj = new AssemblyOneClass1();
-           Console.WriteLine(obj.Id); //Compile Time Error
+           // Console.WriteLine(obj.Id); //Compile Time Error
         }
     }
 }
