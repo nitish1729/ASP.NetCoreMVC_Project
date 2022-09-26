@@ -117,7 +117,7 @@ b.SetBalance(56546862);
 b.SetBalance(500);
 Console.WriteLine(b.GetBalance());
 
-*/
+//...................................................................
 Encapsulations capsule = new Encapsulations();
 capsule.name = "Nitish Mehta";
 capsule.display();
@@ -129,3 +129,20 @@ Console.WriteLine(capsule.AGE);
 capsule.setID(111);
 // getting value of variable using method
 capsule.getID();
+//..........................................................
+*/
+
+Console.WriteLine("Transaction doing SBI Bank");
+SBI sbi = new SBI();
+sbi.ValidateCard();
+sbi.WithdrawMoney();
+sbi.CheckBalanace();
+sbi.BankTransfer();
+sbi.MiniStatement();
+Console.WriteLine("\nTransaction doing AXIX Bank");
+AXIX AXIX = new AXIX();
+AXIX.ValidateCard();
+AXIX.WithdrawMoney();
+AXIX.CheckBalanace();
+AXIX.BankTransfer();
+AXIX.MiniStatement();
