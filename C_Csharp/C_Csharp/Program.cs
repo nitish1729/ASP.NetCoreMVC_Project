@@ -104,6 +104,7 @@ Private.AccessSpecifier();
 Private.getpartname = ".NetDeveloper";
 
 */
+/*
 Bank b = new Bank();
 b.AccountNumber = 12345678;
 b.Balance = 546868;
@@ -116,3 +117,15 @@ b.SetBalance(56546862);
 b.SetBalance(500);
 Console.WriteLine(b.GetBalance());
 
+*/
+Encapsulations capsule = new Encapsulations();
+capsule.name = "Nitish Mehta";
+capsule.display();
+// setting value of variable using method
+capsule.AGE = 25;
+// getting value of variable using method
+Console.WriteLine(capsule.AGE);
+// setting value of variable using property
+capsule.setID(111);
+// getting value of variable using method
+capsule.getID();
