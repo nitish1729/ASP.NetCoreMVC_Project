@@ -6,22 +6,18 @@ using System.Threading.Tasks;
 
 namespace C_Csharp
 {
-    public class Abstraction_Principle
-    { 
-        public void abst()
-        {
-            Console.WriteLine("Absraction Principle in C#:");
-        }
-    }
-    public interface IBank
+    public class AbstractionClass
     {
-        void ValidateCard();
-        void WithdrawMoney();
-        void CheckBalanace();
-        void BankTransfer();
-        void MiniStatement();
     }
-    public class BankFactory
+    public abstract class ABank
+    {
+        public abstract void ValidateCard();
+        public abstract void WithdrawMoney();
+        public abstract void CheckBalanace();
+        public abstract void BankTransfer();
+        public abstract void MiniStatement();
+    }
+    public class BankFeature
     {
         public static IBank GetBankObject(string bankType)
         {
@@ -37,61 +33,51 @@ namespace C_Csharp
             return BankObject;
         }
     }
-
-    public class SBI : IBank
+    public class HDFC : ABank
     {
-        public void BankTransfer()
+        public override void BankTransfer()
         {
             Console.WriteLine("SBI Bank Bank Transfer");
         }
-
-        public void CheckBalanace()
+        public override void CheckBalanace()
         {
             Console.WriteLine("SBI Bank Check Balanace");
         }
-
-        public void MiniStatement()
+        public override void MiniStatement()
         {
             Console.WriteLine("SBI Bank Mini Statement");
         }
-
-        public void ValidateCard()
+        public override void ValidateCard()
         {
             Console.WriteLine("SBI Bank Validate Card");
         }
-
-        public void WithdrawMoney()
+        public override void WithdrawMoney()
         {
             Console.WriteLine("SBI Bank Withdraw Money");
         }
     }
-
-    public class AXIX : IBank
+    public class YES : ABank
     {
-        public void BankTransfer()
+        public override void BankTransfer()
         {
             Console.WriteLine("AXIX Bank Bank Transfer");
         }
-
-        public void CheckBalanace()
+        public override void CheckBalanace()
         {
             Console.WriteLine("AXIX Bank Check Balanace");
         }
-
-        public void MiniStatement()
+        public override void MiniStatement()
         {
             Console.WriteLine("AXIX Bank Mini Statement");
         }
-
-        public void ValidateCard()
+        public override void ValidateCard()
         {
             Console.WriteLine("AXIX Bank Validate Card");
         }
-
-        public void WithdrawMoney()
+        public override void WithdrawMoney()
         {
             Console.WriteLine("AXIX Bank Withdraw Money");
         }
     }
-
 }
+

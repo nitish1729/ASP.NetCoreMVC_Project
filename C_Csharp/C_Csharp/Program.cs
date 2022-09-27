@@ -131,7 +131,7 @@ capsule.setID(111);
 capsule.getID();
 //..........................................................
 */
-
+/*
 Console.WriteLine("Transaction doing SBI Bank");
 SBI sbi = new SBI();
 sbi.ValidateCard();
@@ -146,3 +146,35 @@ AXIX.WithdrawMoney();
 AXIX.CheckBalanace();
 AXIX.BankTransfer();
 AXIX.MiniStatement();
+*/
+Console.WriteLine("Example to Implement Abstraction Principle in C# using Interface:");
+Console.WriteLine("Transaction doing SBI Bank");
+            IBank sbi = BankFactory.GetBankObject("SBI");
+            sbi.ValidateCard();
+            sbi.WithdrawMoney();
+            sbi.CheckBalanace();
+            sbi.BankTransfer();
+            sbi.MiniStatement();
+            Console.WriteLine("\nTransaction doing AXIX Bank");
+            IBank AXIX = BankFactory.GetBankObject("AXIX");
+            AXIX.ValidateCard();
+            AXIX.WithdrawMoney();
+            AXIX.CheckBalanace();
+            AXIX.BankTransfer();
+            AXIX.MiniStatement();
+
+// Implement Abstraction Principle in C# using Abstract Class and Abstract Methods:
+Console.WriteLine("Transaction doing HDFC Bank");
+ABank HDFC = BankFeature.GetBankObject("HDFC");
+HDFC.ValidateCard();
+HDFC.WithdrawMoney();
+HDFC.CheckBalanace();
+HDFC.BankTransfer();
+HDFC.MiniStatement();
+Console.WriteLine("\nTransaction doing YES Bank");
+ABank YES = BankFeature.GetBankObject("YES");
+YES.ValidateCard();
+YES.WithdrawMoney();
+YES.CheckBalanace();
+YES.BankTransfer();
+YES.MiniStatement();
