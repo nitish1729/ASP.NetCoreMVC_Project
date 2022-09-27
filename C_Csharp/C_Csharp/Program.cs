@@ -164,17 +164,20 @@ Console.WriteLine("Transaction doing SBI Bank");
             AXIX.MiniStatement();
 
 // Implement Abstraction Principle in C# using Abstract Class and Abstract Methods:
+/*
 Console.WriteLine("Transaction doing HDFC Bank");
-ABank HDFC = BankFeature.GetBankObject("HDFC");
-HDFC.ValidateCard();
-HDFC.WithdrawMoney();
-HDFC.CheckBalanace();
-HDFC.BankTransfer();
-HDFC.MiniStatement();
+ABank Hdfc = (ABank)BankFeature.GetBankObject("HDFC");
+Hdfc.ValidateCard();
+Hdfc.WithdrawMoney();
+Hdfc.CheckBalanace();
+Hdfc.BankTransfer();
+Hdfc.MiniStatement();
 Console.WriteLine("\nTransaction doing YES Bank");
-ABank YES = BankFeature.GetBankObject("YES");
-YES.ValidateCard();
-YES.WithdrawMoney();
-YES.CheckBalanace();
-YES.BankTransfer();
-YES.MiniStatement();
+ABank Yes = (ABank)BankFeature.GetBankObject("YES");
+Yes.ValidateCard();
+Yes.WithdrawMoney();
+Yes.CheckBalanace();
+Yes.BankTransfer();
+Yes.MiniStatement();
+
+*/

@@ -1,4 +1,5 @@
-﻿using System;
+﻿/*
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,14 +22,14 @@ namespace C_Csharp
     {
         public static IBank GetBankObject(string bankType)
         {
-            IBank BankObject = null;
-            if (bankType == "SBI")
+            ABank BankObject = null;
+            if (bankType == "HDFC")
             {
-                BankObject = new SBI();
+                BankObject = new HDFC();
             }
-            else if (bankType == "AXIX")
+            else if (bankType == "YES")
             {
-                BankObject = new AXIX();
+                BankObject = new YES();
             }
             return BankObject;
         }
@@ -81,3 +82,4 @@ namespace C_Csharp
     }
 }
 
+*/

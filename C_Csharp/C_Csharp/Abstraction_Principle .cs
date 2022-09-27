@@ -28,7 +28,7 @@ namespace C_Csharp
             IBank BankObject = null;
             if (bankType == "SBI")
             {
-                BankObject = new SBI();
+                BankObject = new HDFC();
             }
             else if (bankType == "AXIX")
             {
@@ -38,7 +38,7 @@ namespace C_Csharp
         }
     }
 
-    public class SBI : IBank
+    public class HDFC : IBank
     {
         public void BankTransfer()
         {
