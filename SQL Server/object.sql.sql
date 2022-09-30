@@ -108,4 +108,4 @@ select * from sales.customers order by last_name desc, first_name asc, email des
 select * from sales.customers order by LEN(first_name) DESC;
 select * from sales.customers order by customer_id OFFSET 10 ROWS;
 select * from sales.customers order by customer_id OFFSET 10 ROWS FETCH NEXT 10 ROWS ONLY;
-select top 10 customer_id 
+use TwoWheeleStores

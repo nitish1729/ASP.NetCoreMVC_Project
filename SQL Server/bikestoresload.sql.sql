@@ -1815,7 +1815,7 @@ INSERT INTO production.stocks(store_id, product_id, quantity) VALUES(1,6,0);
 INSERT INTO production.stocks(store_id, product_id, quantity) VALUES(1,7,8);
 INSERT INTO production.stocks(store_id, product_id, quantity) VALUES(1,8,0);
 INSERT INTO production.stocks(store_id, product_id, quantity) VALUES(1,9,11);
-INSERT INTO production.stocks(store_id, product_id, quantity) VALUES(1,10,15);
+INSERT INTO production.stocks(store_id, product_id, quantity) VALUES(1,10,15); 
 INSERT INTO production.stocks(store_id, product_id, quantity) VALUES(1,11,8);
 INSERT INTO production.stocks(store_id, product_id, quantity) VALUES(1,12,16);
 INSERT INTO production.stocks(store_id, product_id, quantity) VALUES(1,13,13);
