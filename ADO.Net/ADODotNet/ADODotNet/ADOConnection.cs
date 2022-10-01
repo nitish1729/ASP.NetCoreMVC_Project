@@ -15,8 +15,9 @@ namespace ADODotNet
             string cs = @"Data Source=DESKTOP-C3BQOGP\SQLEXPRESS;Initial Catalog=ComputerShop;Integrated Security = true;";
             SqlConnection conn = null;
             conn = new SqlConnection(cs);
-            //RENAME A TABLE USING C# ADO.NET
-            string query = @"EXEC sp_rename 'Products', 'Accessories'";
+            //ALTER TABLE USING ADO.NET C#
+            string query = @"ALTER TABLE Accessories
+                  ADD Stock nvarchar(50);";
 
             SqlCommand cmd = new SqlCommand(query, conn);
 
@@ -24,7 +25,7 @@ namespace ADODotNet
             {
                 conn.Open();
                 cmd.ExecuteNonQuery();
-                Console.WriteLine("Table Renamed Successfully");
+                Console.WriteLine("Column Created Successfully");
             }
             catch(SqlException e)
             {
