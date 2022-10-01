@@ -12,25 +12,18 @@ namespace ADODotNet
     {
         public void connect()
         {
-            string cs = @"Data Source = DESKTOP-C3BQOGP\SQLEXPRESS; Initial Catalog = master;Integrated Security = true;";
+            string cs = @"Data Source=DESKTOP-C3BQOGP\SQLEXPRESS;Initial Catalog=master;Integrated Security = true;";
             SqlConnection conn = null;
-            
+            conn = new SqlConnection(cs);
+            //DROP OR DELETE A DATABASE USING ADO.NET C#
+            string query = "DROP DATABASE ComputerShop";
+            SqlCommand cmd = new SqlCommand(query, conn);
+
             try
             {
-                conn = new SqlConnection(cs);
-                //RENAME A DATABASE USING ADO.NET C#
-                string query = "ALTER DATABASE ComputerShop MODIFY NAME = MobileShop";
-                SqlCommand cmd = new SqlCommand(query,conn);
                 conn.Open();
                 cmd.ExecuteNonQuery();
-                Console.WriteLine("Database Renamed  Successfully");
-                /*
-                if (conn.State == ConnectionState.Open)
-                {
-                    Console.WriteLine("SQL Connection has beem successfull:");
-                    Console.ReadLine();
-                }
-                */
+                Console.WriteLine("Database Deleted Successfully");
             }
             catch(SqlException e)
             {
