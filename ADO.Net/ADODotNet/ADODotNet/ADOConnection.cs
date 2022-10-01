@@ -15,12 +15,9 @@ namespace ADODotNet
             string cs = @"Data Source=DESKTOP-C3BQOGP\SQLEXPRESS;Initial Catalog=ComputerShop;Integrated Security = true;";
             SqlConnection conn = null;
             conn = new SqlConnection(cs);
-            //Inserting records in Table
-            string query = "INSERT INTO Products (Name,Price,Date) VALUES('DVD Screen','$140','29 January 2017')";
-
-
+            //Replaced Parameters with Value
+            string query = "INSERT INTO Products (Name, Price, Date) VALUES(@Name, @Price, @Date)";
             SqlCommand cmd = new SqlCommand(query, conn);
-
             //Pass values to Parameters
             cmd.Parameters.AddWithValue("@Name", "USB Keyboard");
             cmd.Parameters.AddWithValue("@Price", "$20");
