@@ -147,6 +147,7 @@ AXIX.CheckBalanace();
 AXIX.BankTransfer();
 AXIX.MiniStatement();
 */
+/*
 Console.WriteLine("Example to Implement Abstraction Principle in C# using Interface:");
 Console.WriteLine("Transaction doing SBI Bank");
             IBank sbi = BankFactory.GetBankObject("SBI");
@@ -162,6 +163,7 @@ Console.WriteLine("Transaction doing SBI Bank");
             AXIX.CheckBalanace();
             AXIX.BankTransfer();
             AXIX.MiniStatement();
+*/
 
 // Implement Abstraction Principle in C# using Abstract Class and Abstract Methods:
 /*
@@ -181,3 +183,29 @@ Yes.BankTransfer();
 Yes.MiniStatement();
 
 */
+
+Class1 cl = new Class1();
+//cl.FirstName = "Nitish";
+//cl.LastName = "Mehta";
+//Console.WriteLine(cl.GetHashCode());
+//Console.WriteLine(cl.ToString());
+//cl.ram();
+cl.firstName = "Nitish";
+cl.lastName = "Mehta";
+//Console.WriteLine(cl.lastName);
+Console.WriteLine(cl.FullName);
+cl.setCountry("India");
+
+Class1.circle c = new Class1.circle();
+c.print();
+
+Customer cs = new Customer();
+cs.FirstName = "Awasthi";
+cs.LastName = "Raj";
+Console.WriteLine(cs.FullName);
+
+BankCustomer Bankcus = new BankCustomer();
+Bankcus.FirstName = "S";
+Bankcus.LastName = "";
+
+Console.WriteLine("Customer Full Name is : " + Bankcus.FullName);
