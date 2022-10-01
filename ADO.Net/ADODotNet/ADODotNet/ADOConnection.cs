@@ -15,9 +15,9 @@ namespace ADODotNet
             string cs = @"Data Source=DESKTOP-C3BQOGP\SQLEXPRESS;Initial Catalog=ComputerShop;Integrated Security = true;";
             SqlConnection conn = null;
             conn = new SqlConnection(cs);
-            //ALTER TABLE USING ADO.NET C#
+            //Editing or Altering a Column
             string query = @"ALTER TABLE Accessories
-                  ADD Stock nvarchar(50);";
+                  ALTER COLUMN Stock int;";
 
             SqlCommand cmd = new SqlCommand(query, conn);
 
@@ -25,7 +25,7 @@ namespace ADODotNet
             {
                 conn.Open();
                 cmd.ExecuteNonQuery();
-                Console.WriteLine("Column Created Successfully");
+                Console.WriteLine("Column Edited Successfully");
             }
             catch(SqlException e)
             {
