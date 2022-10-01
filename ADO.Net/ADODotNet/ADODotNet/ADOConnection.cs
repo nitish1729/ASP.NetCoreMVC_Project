@@ -18,6 +18,7 @@ namespace ADODotNet
             try
             {
                 conn = new SqlConnection(cs);
+                //CREATE A DATABASE USING ADO.NET C#
                 string query = "Create Database ComputerShop";
                 SqlCommand cmd = new SqlCommand(query,conn);
                 conn.Open();
