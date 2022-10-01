@@ -15,8 +15,13 @@ namespace ADODotNet
             string cs = @"Data Source=DESKTOP-C3BQOGP\SQLEXPRESS;Initial Catalog=ComputerShop;Integrated Security = true;";
             SqlConnection conn = null;
             conn = new SqlConnection(cs);
-            //DELETING A SQL TABLE USING C# ADO.NET
-            string query = @"DROP TABLE Accessories";
+            //CREATE A TABLE USING C# ADO.NET
+            string query = @"CREATE TABLE dbo.Products
+                (
+                    Name nvarchar(50) NULL,
+                    Price nvarchar(50) NULL,
+                     Date datetime NULL
+                );";
 
             SqlCommand cmd = new SqlCommand(query, conn);
 
@@ -24,7 +29,7 @@ namespace ADODotNet
             {
                 conn.Open();
                 cmd.ExecuteNonQuery();
-                Console.WriteLine("Table Deleted Successfully");
+                Console.WriteLine("Table Created Successfully");
             }
             catch(SqlException e)
             {
