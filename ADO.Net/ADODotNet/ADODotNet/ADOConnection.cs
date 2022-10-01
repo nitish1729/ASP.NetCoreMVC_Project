@@ -15,21 +15,21 @@ namespace ADODotNet
             string cs = @"Data Source=DESKTOP-C3BQOGP\SQLEXPRESS;Initial Catalog=ComputerShop;Integrated Security = true;";
             SqlConnection conn = null;
             conn = new SqlConnection(cs);
-            //CREATE A TABLE USING C# ADO.NET
-            string query = @"CREATE TABLE dbo.Products
-                (
-                    Name nvarchar(50) NULL,
-                    Price nvarchar(50) NULL,
-                     Date datetime NULL
-                );";
+            //Inserting records in Table
+            string query = "INSERT INTO Products (Name,Price,Date) VALUES('DVD Screen','$140','29 January 2017')";
+
 
             SqlCommand cmd = new SqlCommand(query, conn);
 
+            //Pass values to Parameters
+            cmd.Parameters.AddWithValue("@Name", "USB Keyboard");
+            cmd.Parameters.AddWithValue("@Price", "$20");
+            cmd.Parameters.AddWithValue("@Date", "25 May 2017");
             try
             {
                 conn.Open();
                 cmd.ExecuteNonQuery();
-                Console.WriteLine("Table Created Successfully");
+                Console.WriteLine("Records Inserted Successfully");
             }
             catch(SqlException e)
             {
