@@ -6,5 +6,7 @@
 //FirstConnection first = new FirstConnection();
 //first.CreateConnection();
 
-Class1 one = new Class1();
-one.ADOone();
+//Class1 one = new Class1();
+//one.ADOone();
+ADOConnection add = new ADOConnection();
+add.connect();

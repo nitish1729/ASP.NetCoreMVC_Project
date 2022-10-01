@@ -12,7 +12,7 @@ namespace ADODotNet
     {
         public void ADOone()
         {
-            string cs = "Data Source=DESKTOP-C3BQOGP\\SQLEXPRESS;Initial Catalog=TwoWheeleStores;Integrated Security = true;";
+            string cs = @"Data Source=DESKTOP-C3BQOGP\SQLEXPRESS;Initial Catalog=TwoWheeleStores;Integrated Security = true;";
             SqlConnection con = null;
             try
             {
