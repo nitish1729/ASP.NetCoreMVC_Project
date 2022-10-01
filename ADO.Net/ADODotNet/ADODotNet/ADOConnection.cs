@@ -15,9 +15,9 @@ namespace ADODotNet
             string cs = @"Data Source=DESKTOP-C3BQOGP\SQLEXPRESS;Initial Catalog=ComputerShop;Integrated Security = true;";
             SqlConnection conn = null;
             conn = new SqlConnection(cs);
-            //Editing or Altering a Column
+            //Drop or Delete a Column
             string query = @"ALTER TABLE Accessories
-                  ALTER COLUMN Stock int;";
+                   DROP COLUMN Stock;";
 
             SqlCommand cmd = new SqlCommand(query, conn);
 
@@ -25,7 +25,7 @@ namespace ADODotNet
             {
                 conn.Open();
                 cmd.ExecuteNonQuery();
-                Console.WriteLine("Column Edited Successfully");
+                Console.WriteLine("Column Deleted Successfully");
             }
             catch(SqlException e)
             {
