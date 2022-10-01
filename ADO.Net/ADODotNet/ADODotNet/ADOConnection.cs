@@ -28,7 +28,7 @@ namespace ADODotNet
             // Coping the records of Products into Items table
             string query = "INSERT INTO Items(Name,Price,Date) SELECT Name,Price,Date FROM Products";
             SqlCommand cmd = new SqlCommand(query, conn);
-            /*
+            /* .
             //Pass values to Parameters
             cmd.Parameters.AddWithValue("@Name", "USB Keyboard");
             cmd.Parameters.AddWithValue("@Price", "$20");
