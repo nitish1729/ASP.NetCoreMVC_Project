@@ -28,12 +28,9 @@ namespace ADODotNet
               );";
            */
             // Coping the records of Products into Items table
-            string query = @"CREATE PROCEDURE Insert_Record_Procedure
-            (
-             @Name VARCHAR(50),
-             @Price VARCHAR(50),
-             @Date DATETIME
-            )As INSERT INTO Products(Name,Price,Date) Values(@Name,@Price,@Date) ";
+            string query = @"
+                select SPECIFIC_NAME from ComputerShop.information_schema.routines where routine_type = 'PROCEDURE'
+            ";
             SqlCommand cmd = new SqlCommand(query, conn);
             /* .
             //Pass values to Parameters
@@ -44,7 +41,12 @@ namespace ADODotNet
             try
             {
                 conn.Open();
-                cmd.ExecuteNonQuery();
+                SqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    Console.WriteLine(dr["SPECIFIC_NAME"].ToString());
+                }
+                //cmd.ExecuteNonQuery();
                 Console.WriteLine("Store Procedure Created Successfully");
             }
             catch(SqlException e)
@@ -54,6 +56,7 @@ namespace ADODotNet
             finally
             {
                 conn.Close();
+                Console.ReadKey();
             }
 
         }
