@@ -28,9 +28,7 @@ namespace ADODotNet
               );";
            */
             // Coping the records of Products into Items table
-            string query = @"
-                select SPECIFIC_NAME from ComputerShop.information_schema.routines where routine_type = 'PROCEDURE'
-            ";
+            string query = "Insert_Record_Procedure";
             SqlCommand cmd = new SqlCommand(query, conn);
             /* .
             //Pass values to Parameters
@@ -41,15 +39,27 @@ namespace ADODotNet
             try
             {
                 conn.Open();
-                SqlDataReader dr = cmd.ExecuteReader();
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add(new SqlParameter("@Name", "SSD DRIVE"));
+                cmd.Parameters.Add(new SqlParameter("@Price", "$300"));
+                cmd.Parameters.Add(new SqlParameter("@Date", "25 August 14"));
+                int i = cmd.ExecuteNonQuery();
+                if (i > 0)
+                {
+                    Console.WriteLine("Records Inserted Successfully.");
+                }
+
+                /*SqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
                     Console.WriteLine(dr["SPECIFIC_NAME"].ToString());
                 }
                 //cmd.ExecuteNonQuery();
+                
                 Console.WriteLine("Store Procedure Created Successfully");
+                */
             }
-            catch(SqlException e)
+            catch (SqlException e)
             {
                 Console.WriteLine("Error Generated. Details: " + e.ToString());
             }
