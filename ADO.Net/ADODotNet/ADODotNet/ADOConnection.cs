@@ -13,20 +13,26 @@ namespace ADODotNet
     {
         public void connect()
         {
-            string cs = @"Data Source=DESKTOP-C3BQOGP\SQLEXPRESS;Initial Catalog=ComputerShop;Integrated Security = true;";
+            string cs = @"Data Source=DESKTOP-C3BQOGP\SQLEXPRESS;Initial Catalog=bikesStores;Integrated Security = true;";
             SqlConnection conn = new SqlConnection(cs);
-            String query = "Select * from Items";
+            String query = "Select * from production.categories";
             try
             {
                 conn.Open();
+                SqlDataAdapter adapter = new SqlDataAdapter(query,cs);
+                DataSet ds = new DataSet();
+                adapter.Fill(ds, "production.categories");
+                Console.WriteLine(ds.GetXml());
+                /*
                 SqlCommand cmd = new SqlCommand(query, conn);
                SqlDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
                     Console.WriteLine(reader[0].ToString() + " " + reader[1].ToString() + " " + reader[2].ToString());
                 }
+                */
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 Console.WriteLine(e.Message);
             }
