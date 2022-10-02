@@ -12,21 +12,28 @@ namespace ADODotNet
     {
         public void connect()
         {
+
             string cs = @"Data Source=DESKTOP-C3BQOGP\SQLEXPRESS;Initial Catalog=ComputerShop;Integrated Security = true;";
             SqlConnection conn = null;
             conn = new SqlConnection(cs);
-            //Created a more table
-            //string query = "INSERT INTO Products (Name, Price, Date) VALUES(@Name, @Price, @Date)";
             /*
-            string query = @"create table dbo.Items
-              (
-               Name varchar(50) NULL,
-               Price varchar(50) NULL,
-               Date datetime NULL,
-               );";
-            */
+           //Created a more table
+           //string query = "INSERT INTO Products (Name, Price, Date) VALUES(@Name, @Price, @Date)";
+
+           string query = @"create table dbo.Items
+             (
+              Name varchar(50) NULL,
+              Price varchar(50) NULL,
+              Date datetime NULL,
+              );";
+           */
             // Coping the records of Products into Items table
-            string query = "INSERT INTO Items(Name,Price,Date) SELECT Name,Price,Date FROM Products";
+            string query = @"CREATE PROCEDURE Insert_Record_Procedure
+            (
+             @Name VARCHAR(50),
+             @Price VARCHAR(50),
+             @Date DATETIME
+            )As INSERT INTO Products(Name,Price,Date) Values(@Name,@Price,@Date) ";
             SqlCommand cmd = new SqlCommand(query, conn);
             /* .
             //Pass values to Parameters
@@ -38,7 +45,7 @@ namespace ADODotNet
             {
                 conn.Open();
                 cmd.ExecuteNonQuery();
-                Console.WriteLine("Records copied into Items table Successfully");
+                Console.WriteLine("Store Procedure Created Successfully");
             }
             catch(SqlException e)
             {
