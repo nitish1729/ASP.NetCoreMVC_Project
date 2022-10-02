@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
+using System.Reflection.PortableExecutable;
 
 namespace ADODotNet
 {
@@ -12,63 +13,28 @@ namespace ADODotNet
     {
         public void connect()
         {
-
             string cs = @"Data Source=DESKTOP-C3BQOGP\SQLEXPRESS;Initial Catalog=ComputerShop;Integrated Security = true;";
-            SqlConnection conn = null;
-            conn = new SqlConnection(cs);
-            /*
-           //Created a more table
-           //string query = "INSERT INTO Products (Name, Price, Date) VALUES(@Name, @Price, @Date)";
-
-           string query = @"create table dbo.Items
-             (
-              Name varchar(50) NULL,
-              Price varchar(50) NULL,
-              Date datetime NULL,
-              );";
-           */
-            // Coping the records of Products into Items table
-            string query = "Insert_Record_Procedure";
-            SqlCommand cmd = new SqlCommand(query, conn);
-            /* .
-            //Pass values to Parameters
-            cmd.Parameters.AddWithValue("@Name", "USB Keyboard");
-            cmd.Parameters.AddWithValue("@Price", "$20");
-            cmd.Parameters.AddWithValue("@Date", "25 May 2017");
-            */
+            SqlConnection conn = new SqlConnection(cs);
+            String query = "Select * from Items";
             try
             {
                 conn.Open();
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.Add(new SqlParameter("@Name", "SSD DRIVE"));
-                cmd.Parameters.Add(new SqlParameter("@Price", "$300"));
-                cmd.Parameters.Add(new SqlParameter("@Date", "25 August 14"));
-                int i = cmd.ExecuteNonQuery();
-                if (i > 0)
+                SqlCommand cmd = new SqlCommand(query, conn);
+               SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
                 {
-                    Console.WriteLine("Records Inserted Successfully.");
+                    Console.WriteLine(reader[0].ToString() + " " + reader[1].ToString() + " " + reader[2].ToString());
                 }
-
-                /*SqlDataReader dr = cmd.ExecuteReader();
-                while (dr.Read())
-                {
-                    Console.WriteLine(dr["SPECIFIC_NAME"].ToString());
-                }
-                //cmd.ExecuteNonQuery();
-                
-                Console.WriteLine("Store Procedure Created Successfully");
-                */
             }
-            catch (SqlException e)
+            catch(Exception e)
             {
-                Console.WriteLine("Error Generated. Details: " + e.ToString());
+                Console.WriteLine(e.Message);
             }
             finally
             {
                 conn.Close();
-                Console.ReadKey();
+                Console.ReadLine();
             }
-
         }
-    }    
+    }     
 }
