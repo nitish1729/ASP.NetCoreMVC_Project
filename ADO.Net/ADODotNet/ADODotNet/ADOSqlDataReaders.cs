@@ -17,16 +17,19 @@ namespace ADODotNet
             using (conn = new SqlConnection(cs))
             {
                 // Creating the command object
-                string query = "INSERT INTO students VALUES (101, 'Anurag', 'Anurag@dotnettutorial.net', '1234567890')" +
-                    "INSERT INTO students VALUES (102, 'Priyanka', 'Priyanka@dotnettutorial.net', '2233445566')" +
-                    "INSERT INTO students VALUES (103, 'Preety', 'Preety@dotnettutorial.net', '6655443322')" +
-                    "INSERT INTO students VALUES (104, 'Sambit', 'Sambit@dotnettutorial.net', '9876543210')";
+                string query = "select * from students";
                 SqlCommand cmd = new SqlCommand(query, conn);
                 try
                 {
+                    // Opening Connection  
                     conn.Open();
-                    cmd.ExecuteNonQuery();
-                    Console.WriteLine("Records Inserted Successfully");
+                    // Executing the SQL query  
+                    SqlDataReader sdr = cmd.ExecuteReader();
+                    while (sdr.Read())
+                    {
+                        Console.WriteLine(sdr["Name"] + ",  " + sdr["Email"] + ",  " + sdr["Mobile"]);
+                    }
+                    Console.WriteLine("display the records Inserted Successfully");
                 }
                 catch(Exception e)
                 {
