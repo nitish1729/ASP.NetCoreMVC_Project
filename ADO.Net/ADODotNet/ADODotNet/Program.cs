@@ -8,5 +8,10 @@
 
 //Class1 one = new Class1();
 //one.ADOone();
-ADOConnection add = new ADOConnection();
-add.connect();
+//ADOConnection add = new ADOConnection();
+//add.connect();
+//ConADOAndSQLServer Connect = new ConADOAndSQLServer();
+//Connect.connect();
+
+ADOSqlDataReaders ad = new ADOSqlDataReaders();
+ad.Sqlreader();
