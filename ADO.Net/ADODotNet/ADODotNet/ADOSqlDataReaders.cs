@@ -25,15 +25,19 @@ namespace ADODotNet
                     conn.Open();
                     // Executing the SQL query  
                     SqlDataReader sdr = cmd.ExecuteReader();
+                    // Closing the Connection  
+                    conn.Close();
+                    //Reading Data from Reader will give runtime error as the connection is closed
                     while (sdr.Read())
                     {
                         Console.WriteLine(sdr["Name"] + ",  " + sdr["Email"] + ",  " + sdr["Mobile"]);
+                        Console.WriteLine("display the records Inserted Successfully");
+                        Console.WriteLine(sdr[0] + ",  " + sdr[1] + ",  " + sdr[2]);
                     }
-                    Console.WriteLine("display the records Inserted Successfully");
                 }
                 catch(Exception e)
                 {
-                    Console.WriteLine(e.Message);
+                    Console.WriteLine("OOPs, something went wrong.\n" + e.Message);
                 }
             }
         }
