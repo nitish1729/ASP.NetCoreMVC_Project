@@ -4,6 +4,10 @@ namespace Asp.NetCoreMVC.Controllers
 {
     public class HomeController : Controller
     {
+        public IActionResult Hello()
+        {
+            return View();
+        }
         public string Index()
         {
             return "Action method returning View";
@@ -16,10 +20,7 @@ namespace Asp.NetCoreMVC.Controllers
         {
             return "Nitish Mehta";
         }
-        public IActionResult Hello()
-        {
-            return View();
-        }
+       
 
     }
 }

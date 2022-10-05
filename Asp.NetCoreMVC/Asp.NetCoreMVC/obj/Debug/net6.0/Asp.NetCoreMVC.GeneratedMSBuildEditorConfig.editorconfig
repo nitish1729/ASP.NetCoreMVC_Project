@@ -15,6 +15,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\NITISH MEHTA\OneDrive\Desktop\.Net_Developer\Asp.NetCoreMVC\Asp.NetCoreMVC
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/NITISH MEHTA/OneDrive/Desktop/.Net_Developer/Asp.NetCoreMVC/Asp.NetCoreMVC/Views/First/Hello.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmlyc3RcSGVsbG8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/NITISH MEHTA/OneDrive/Desktop/.Net_Developer/Asp.NetCoreMVC/Asp.NetCoreMVC/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
