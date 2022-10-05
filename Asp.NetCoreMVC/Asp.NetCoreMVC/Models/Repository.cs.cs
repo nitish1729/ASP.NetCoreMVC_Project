@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 namespace Asp.NetCoreMVC.Models
 {
-    public class Repository
+    public static class Repository
     {
         private static List<Employee> allEmpoyees = new List<Employee>();
         public static IEnumerable<Employee> AllEmpoyees
@@ -12,6 +12,10 @@ namespace Asp.NetCoreMVC.Models
         public static void Create(Employee employee)
         {
             allEmpoyees.Add(employee);
+        }
+        public static void Delete(Employee employee)
+        {
+            allEmpoyees.Remove(employee);
         }
     }
 }
