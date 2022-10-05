@@ -1,0 +1,23 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+<style>
+    h2{
+        color:blue;
+    }
+    p{
+        color:red;
+    }
+</style>
+@Model Person
+@{
+    ViewData["Tittle"] = "Info";
+}
+
+<h2>Info</h2>
+<p style="color:red">FirstName: @Model.FirstName</p>
+<p>LastName: @Model.LastName</p>
+<p>FullName: @Model.FullName</p>
+<p>Age: @Model.age</p>
+<p>City: @Model.city</p>
